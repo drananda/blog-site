@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+/* navbar */
+#navigation{
+    /* background-color: #343a40; */
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+}
+#navigation #webname{
+    flex: 1;
+    text-align: center;
+}
+#navigation #webname a{
+    color: black;
+    text-decoration: none;
+    font-size: 18pt;
+}
+#navigation img.menu{
+    display: none;
+}
+#navigation .navigation-list{
+    flex: 5;
+}
+#navigation .navigation-list li{
+    display: inline-block;
+}
+#navigation .navigation-list li a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0.5;
+    font-weight: bold;
+}
+#navigation .navigation-list .active{
+    opacity: 1;
+}
+#navigation .login{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+#navigation .login li{
+    list-style: none;
+}
+#navigation .login li a{
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.upside-down{
+    transform: rotateX(180deg);
+}
+.delay-halfs{
+    transition-duration: 0.5s;
+}
+.delay-1s{
+    transition-duration: 1s;
+}
+#navigation .user-account{
+    width: 2.5em;
+    height: 2.5em;
+}
+#navigation .user-account img{
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+#navigation .user-account img:hover{
+    opacity: 1;
+}
+#navigation .dropdown-user-account{
+    display: none;
+}
+#navigation .dropdown-user-account.active{
+    display: block;
+}
+#navigation .dropdown-user-account ul{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+}
+#navigation .dropdown-user-account ul a li{
+    background-color: white;
+    padding: 10px;
+    margin: 2px 0;
+    color: black;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 2px 2px lightgrey, -1px -1px 1px 1px lightgrey;
+}
+#navigation .dropdown-user-account ul a{
+    text-decoration: none;
+}
+#navigation .dropdown-user-account ul a li:hover{
+    opacity: 0.5;
+}
+#navigation .dropdown-user-account ul a li img{
+    margin-right: 10px;
+}
+#navigation .login .quick-login{
+    margin-right: 50px;
+}
+#navigation .login .quick-login:hover{
+    opacity: 0.5;
+}
+#navigation .login .expand:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#navigation .search{
+    flex: 0.5;
+}
+#navigation .search .search-navigation img{
+    cursor: pointer;
+}
+#navigation .search li{
+    list-style: none;
+}
+#navigation .search .search-navigation img:hover{
+    opacity: 0.5;
+}
+.search .form-group .form-input{
+    padding: 10px 20px;
+    font-size: 14pt;
+    margin: 0 0.5em;
+    outline: none;
+}
+.search .form-group .form-input:focus{
+    box-shadow: 1px 1px 1px 1px lightgrey;
+}
+.search .form-group .btn-submit{
+    font-size: 12pt;
+    padding: 8px 10px;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+}
+.search .form-group .btn-submit:hover{
+    opacity: 0.75;
+}
+.search .form-group .form-input, .search .form-group .btn-submit{
+    border-radius: 30px;
+    border: 1px solid lightgrey;
+}
+.search-dropdown{
+    display: none;
+    position: fixed;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    left: 0;
+    padding: 10px;
+}
+.search-dropdown.active{
+    display: block;
+}
+@media(max-width: 570px){
+    .container{
+        width: 100%;
+    }
+    #navigation #webname{
+        flex: 4;
+    }
+    #navigation .navigation-list{
+        display: none;
+    }
+    #navigation .login{
+        flex: 1;
+    }
+    #navigation .login .quick-login{
+        display: none;
+    }
+    #navigation img.menu{
+        display: flex;
+    }
+    #navigation .navigation-list.active{
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    #navigation .navigation-list.active li{
+        display: block;
+        background-color: white;
+        margin: 2px 0;
+        padding: 10px;
+        box-shadow: 1px 1px 2px 2px lightgrey, -1px -1px 1px 1px lightgrey;
+    }
+    #navigation{
+        padding: 5px;
+    }
+    #navigation .dropdown-user-account ul{
+        top: 50px;
+    }
+}
+
+/* account profile */
+
+/* #account-profile{
+    border: 1px solid lightgrey;
+    overflow: auto;
+    margin-bottom: 20px;
+} */
+#account-profile .name{
+    margin-top: -50px;
+    padding: 0 20px;
+}
+#account-profile .cover-img-frame{
+    height: 300px;
+    border: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+#account-profile .cover-img-frame img{
+    width: 100%;
+}
+#account-profile .biodata{
+    margin: 20px 0;
+    width: 50%;
+}
+#account-profile .biodata .biodata-item{
+    list-style: none;
+    /* border: 1px solid lightgrey; */
+    padding: 10px;
+    font-weight: bold;
+}
+#account-profile .biodata .biodata-item:not(#account-profile .biodata .biodata-item:nth-child(2)){
+    background-color: lightgrey;
+}
+#account-profile .biodata button{
+    float: right;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid lightgrey;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+#account-profile .biodata button:hover{
+    opacity: 0.5;
+}
+#account-profile .profile-img-frame{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    bottom: 75px;
+    border: 5px solid lightgrey;
+}
+#account-profile .profile-img-frame img{
+    width: 100%;
+    height: 100%;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+}
+.modal .form-group{
+    background-color: white;
+    padding: 20px;
+    width: max-content;
+    margin: 10px auto;
+}
+.modal .modal-close{
+    position: relative;
+    top: -50px;
+    right: -315px;
+    cursor: pointer;
+}
+.modal .modal-close:hover{
+    background-color: lightgrey;
+    width: max-content;
+    opacity: 0.5;
+}
+.modal .form-list .form-input, .modal .form-list .form-label{
+    display: block;
+}
+.modal .form-list .form-input{
+    font-size: 14pt;
+    padding: 5px;
+    width: 300px;
+}
+.modal .btn-submit{
+    padding: 5px 10px;
+    font-size: 12pt;
+    float: right;
+}
+.modal .form-group .email-confirm-check{
+    margin-top: 10px;
+}
+.clear{
+    clear: right;
+}
+.modal .form-list .form-input, .modal .form-list .form-label, .modal .btn-submit{
+    margin-top: 10px;
+}
+.post.card{
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    padding: 20px;
+    margin: 20px 0;
+}
+#posts-history .post .title{
+    margin-bottom: 10px;
+}
+#posts-history .post p.category{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#posts-history .post p.description{
+    line-height: 1.5;
+}
+@media(max-width: 570px){
+    #account-profile .profile-img-frame{
+        width: 100px;
+        height: 100px;
+    }
+    #account-profile .profile-img-frame img{
+        width: 100px;
+        height: 100px;
+    }
+    #account-profile .cover-img-frame{
+        height: 200px;
+        width: 100%;
+    }
+    #account-profile .cover-img-frame{
+        height: 200px;
+        width: 100%;
+    }
+    #account-profile .name{
+        font-size: 16pt;
+        margin: -50px 10px 0;
+    }
+    #account-profile .biodata{
+        margin: 0 10px;
+        width: 95%;
+    }
+    #posts-history .post h1.title{
+        font-size: 18pt;
+    }
+}
+@media(max-width: 780px) AND (min-width: 571px){
+    #account-profile .profile-img-frame{
+        height: 120px;
+        width: 120px;
+    }
+}
+
+/* posts */
+.post .title{
+    font-size: 18pt;
+}
+.post .post-img-frame{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    max-height: 300px;
+    margin: 1em 0;
+}
+.post .post-img-frame img{
+    width: 100%;
+}
+.post .description{
+    line-height: 1.5;
+}
+.post .description a{
+    text-decoration: none;
+}
+.post .description a:visited{
+    color: red;
+}
+@media(max-width: 571px){
+    .post .post-img-frame{
+        max-height: 100px;
+    }
+    .post.card{
+        border-right: none;
+        border-left: none;
+    }
+}
+
+/* sigle post */
+.post.single-post .title{
+    text-align: center;
+}
+.post.card.single-post .post-img-frame{
+    max-height: none;
+}
+.post p.author{
+    font-weight: bold;
+    margin: 1em 0;
+    text-align: center;
+}

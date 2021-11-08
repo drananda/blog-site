@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="navigation">
+            <img src="img/1x/baseline_menu_black_36dp.png" alt="" class="menu">
+            <h1 id="webname"><a href="#">Blogs</a></h1>
+            <ul class="navigation-list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul class="search">
+                <li class="search-navigation"><img src="img/1x/outline_search_black_24dp.png" alt=""></li>
+                <li class="search-dropdown">
+                    <form action="" class="form-group">
+                        <input type="text" class="form-input">
+                        <button type="submit" class="btn-submit"><img src="img/1x/outline_search_black_24dp.png" alt=""></button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="login">
+                <li class="quick-login"><a href="#"><img src="img/1x/baseline_login_black_24dp.png" alt=""></a></li>
+                <li class="user-account"><a href="#"><img src="img/gambar3.jpg" alt=""></a></li>
+                <li class="expand"><img src="img/1x/outline_expand_more_black_24dp.png" alt="" class="delay-halfs"></li>
+                <div class="dropdown-user-account">
+                    <ul>
+                        <a href="#"><li><img src="img/1x/baseline_login_black_24dp.png" alt=""> Login</li></a>
+                        <a href="#"><li><img src="img/1x/baseline_person_add_black_18dp.png" alt=""> Sign up</li></a>
+                        <a href="#"><li><img src="img/1x/baseline_manage_accounts_black_18dp.png" alt=""> User settings</li></a>
+                        <a href="#"><li><img src="img/1x/baseline_settings_black_18dp.png" alt=""> settings</li></a>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="modal">
+            <form action="" method="post" class="form-group">
+                <h1 class="modal-title">Edit profile</h1>
+                <div class="modal-close">X</div>
+                <div class="form-list">
+                    <label for="" class="form-label">Name : </label>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-list">
+                    <label for="" class="form-label">Birth date : </label>
+                    <input type="date" class="form-input">
+                </div>
+
+                <div class="form-list">
+                    <label for="" class="form-label">Address : </label>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-list">
+                    <label for="" class="form-label">Job : </label>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-list">
+                    <label for="" class="form-label">Password : </label>
+                    <input type="password" class="form-input" required>
+                </div>
+
+                <input type="checkbox" class="email-confirm-check" id="check">
+                <label for="check">Send me email</label>
+                <button type="submit" class="btn-submit btn-inactive" disabled>Submit</button>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="container">
+            <div id="account-profile">
+                <div class="cover-img-frame">
+                    <img src="img/gambar1.jpg" alt="">
+                </div>
+                <div class="profile-img-frame">
+                    <img src="img/gambar2.jpg" alt="">
+                </div>
+                <h1 class="name">Dwiki Rizky Ananda</h1>
+                <ul class="biodata">
+                    <li class="biodata-item">Birth date : mm-dd-yyyy</li>
+                    <li class="biodata-item">Address : Your address</li>
+                    <li class="biodata-item">Joined since : mm-dd-yyyy</li>
+                    <button type="button" class="btn-edit">Edit</button>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <div id="posts-history" class="container">
+            <div class="post card">
+                <h1 class="title">TItle 1</h1>
+                <p class="category">In programming</p>
+                <p class="description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit unde eaque in consequatur. Ea qui quibusdam voluptatum! Mollitia excepturi vero fugit, dolorem temporibus quam accusamus ut ipsa consequatur?
+                </p>
+            </div>
+            <div class="post card">
+                <h1 class="title">TItle 1</h1>
+                <p class="description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit unde eaque in consequatur. Ea qui quibusdam voluptatum! Mollitia excepturi vero fugit, dolorem temporibus quam accusamus ut ipsa consequatur?
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/searchbar.js"></script>
+</body>
+</html>
